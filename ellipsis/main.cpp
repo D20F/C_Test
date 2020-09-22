@@ -7,32 +7,8 @@
 
 #include "swap.h"
 using namespace std;
-class Parent //父类
-{
-private:
-    int a;
 
-public:
-    Parent(int item) : a(item)
-    {
-        cout << "Pareant的有参构造函数" << endl;
-        Parent_show();
-    }
-    Parent()
-    {
-        cout << "Pareant的无参构造函数" << endl;
-    }
-    void Parent_show()
-    {
-        cout << "parent value  = " << a << endl;
-    }
-    virtual void same_fun()
-    {
-        cout << "same_fun() -parent  ";
-        Parent_show();
-    }
-};
-
+// 获取函数所有不定参数
 int sum(int count, ...)
 {
     if (count <= 0)
